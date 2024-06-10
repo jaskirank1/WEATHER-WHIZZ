@@ -1,70 +1,43 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WEATHER WHIZZ
 
-## Available Scripts
+Weather Whiz is a dynamic and user-friendly weather application built using React. This project leverages the power of APIs to provide real-time weather information, ensuring users are always informed about current weather conditions. Here's an overview of its key features and functionalities:
 
-In the project directory, you can run:
+## Key Features:
+1) Real-time Weather Updates:
 
-### `npm start`
+On opening the website, users are greeted with the current weather details of their location. This includes temperature, weather conditions (sunny, cloudy, rainy, etc.), humidity, wind speed, and other relevant metrics. The application automatically detects the user's location using their browser's geolocation services.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2) Time and Date Display:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The website prominently displays the current date and time, providing users with a comprehensive overview of their environment.
 
-### `npm test`
+3) City Search Functionality:
+Users can search for weather details of any city worldwide. By entering the city name, the application dynamically fetches and displays the relevant weather data.
+This feature makes it convenient for users to check weather conditions for travel planning, checking on family and friends, or simply exploring different parts of the world.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4) API Integration:
+The application utilizes the WeatherAPI service to fetch weather data. This reliable and accurate source ensures users receive the latest weather updates.
+The data fetched includes a wide array of weather-related information, making the application robust and comprehensive.
 
-### `npm run build`
+5) Context API for State Management:
+The React Context API is employed for state management, ensuring smooth data flow and accessibility across different components of the application.
+This method enhances the scalability and maintainability of the code, making it easier to manage the application's state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technical Stack:
+1) Frontend: React
+2) State Management: React Context API
+3) API: https://www.weatherapi.com/ (for fetching weather data)
+4) Geolocation Services: Browser Geolocation API for current location
+5) Styling: CSS, with potential use of libraries like Bootstrap or Material-UI for enhanced design and responsiveness
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Implementation Details:
+Location Detection: On loading, the application uses the browser's geolocation API to get the user's coordinates, which are then used to fetch weather data from the WeatherAPI.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+API Calls: API calls are made using asynchronous functions (fetch method) to retrieve data from WeatherAPI based on the user's location or the city searched.
 
-### `npm run eject`
+Context API Usage: The Context API is set up to manage the state of the application, including the user's current location, weather data, search queries, and any other global state needed for the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Dynamic Updates: Upon a successful city search, the application dynamically updates the weather details on the UI without requiring a page reload, providing a seamless user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By combining these elements, Weather Whiz offers a robust and engaging platform for users to stay updated on weather conditions, whether at their current location or any city they wish to explore.
